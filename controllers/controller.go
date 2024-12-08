@@ -16,7 +16,7 @@ func AddUser(db *gorm.DB, user *models.User) {
 
 func SearchByFirstName(db *gorm.DB, firstName string) {
 	var users []models.User
-	result := db.Where("FirstName = ?", firstName).Find(&users)
+	result := db.Where("first_name = ?", firstName).Find(&users)
 	if result.Error != nil {
 		panic("failed to retrieve user")
 	}

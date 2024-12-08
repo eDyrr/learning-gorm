@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/eDyrr/learning-gorm/controllers"
 	"github.com/eDyrr/learning-gorm/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -34,5 +35,5 @@ func main() {
 	// 	panic("failed to create user:" + result.Error.Error())
 	// }
 
-	SearchByFirstName(db, "Jane")
+	controllers.SearchByFirstName(db, "Jane")
 }
