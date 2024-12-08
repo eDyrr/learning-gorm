@@ -33,4 +33,6 @@ func main() {
 	// if result.Error != nil {
 	// 	panic("failed to create user:" + result.Error.Error())
 	// }
+
+	SearchByFirstName(db, "Jane")
 }

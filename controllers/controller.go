@@ -20,6 +20,10 @@ func SearchByFirstName(db *gorm.DB, firstName string) {
 	if result.Error != nil {
 		panic("failed to retrieve user")
 	}
+
+	for _, user := range users {
+		fmt.Printf("%+v\n", user)
+	}
 }
 
 func ListAll(db *gorm.DB) {
